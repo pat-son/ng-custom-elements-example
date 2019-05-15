@@ -1,14 +1,31 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>NgCustomElementsExample</title>
-  <base href="/">
+    <head>
+        <meta charset="utf-8">
+        <title>Custom Elements Example</title>
+        <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <p>Simple element with an input:</p>
+        <hello-world name="Patrick"></hello-world>
+        <p>Card with content:</p>
+        <simple-card title="Lorem Ipsum">
+            <p><span style="color: red;">Lorem</span> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </simple-card>
+        <p>Two components which share state through a provider:</p>
+        <shared-counter></shared-counter>
+        <shared-counter></shared-counter>
+        <p>Tabs:</p>
+        <custom-tabs>
+            <button slot="tabs">Tab 1</button>
+            <button slot="tabs">Tab 2</button>
+            <button slot="tabs">Tab 3</button>
+
+            <section slot="content">This is the content of the first tab</section>
+            <section slot="content">This is the <strong>second</strong> tab</section>
+            <section slot="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</section>
+        </custom-tabs>
+    </body>
 </html>

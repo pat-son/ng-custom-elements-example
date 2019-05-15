@@ -1,0 +1,22 @@
+:host {
+    display: block;
+    width: 300px;
+    border: 1px solid blue;
+    border-radius: 4px;
+}
+
+.tabs {
+    padding: 0px 10px;
+}
+
+.content {
+    padding: 10px;
+}
+
+::slotted(button[aria-selected="true"]) {
+    color: red;
+}
+
+::slotted(section[aria-hidden="true"]) {
+    display: none;
+}
